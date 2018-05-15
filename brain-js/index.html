@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            #example {
+                padding: 100px;
+                background: #ff0000;
+                color: white;
+                font-size: 36px;
+                }
+        </style>
+    </head>
+    <body>
+        <input type="color" value="#fff">
+        <div id="example">sample text</div>
+
+        <script src="https://unpkg.com/brain.js@1.1.2/browser.min.js"></script>
+        <script>
+            const input = document.querySelector('input')
+            const example = document.querySelector('example')
+
+            input.addEventListener('change', e => {
+                example.style.background = e.target.value
+            })
+        </script>
+    </body>
+</html>
